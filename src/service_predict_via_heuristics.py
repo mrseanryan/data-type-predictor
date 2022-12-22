@@ -8,7 +8,19 @@ def predict_type_from_name(property_name):
 
     first_token = tokens[0]
 
-    BooleanTokens = ["is", "can", "should", "did"]
+    booleanTokens = ["is", "can", "should", "did", "was", "active", "ignore"]
 
-    if first_token in BooleanTokens:
+    if first_token in booleanTokens:
         return data_types.Boolean()
+
+    last_token = tokens[-1]
+
+    integerSuffixTokens = ["number", "nr", "height", "width", "length", "depth", "speed", "velocity", "priority"]
+    if last_token in integerSuffixTokens:
+        return data_types.Integer()
+    
+    integerPrefixTokens = ["nr"]
+    if first_token in integerPrefixTokens:
+        return data_types.Integer()
+    
+    return None

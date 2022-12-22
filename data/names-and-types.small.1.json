@@ -1,1 +1,268 @@
-{"data": [{"name": "Inv_Balance", "data_type": "Decimal"}, {"name": "IsDeleted", "data_type": "Boolean"}, {"name": "UploadDate", "data_type": "Date"}, {"name": "Height", "data_type": "Integer"}, {"name": "DocumentDate", "data_type": "String"}, {"name": "RetrieveType", "data_type": "Enumeration"}, {"name": "ReplyTo", "data_type": "String"}, {"name": "SeniorManager", "data_type": "String"}, {"name": "IsFilterActive", "data_type": "Boolean"}, {"name": "BkdNumber", "data_type": "Integer"}, {"name": "PassPhrase_Plain", "data_type": "String"}, {"name": "PreviousInterval", "data_type": "Integer"}, {"name": "HelpText", "data_type": "String"}, {"name": "ImportAction", "data_type": "Enumeration"}, {"name": "LogDateTime", "data_type": "Date"}, {"name": "TeamType", "data_type": "Enumeration"}, {"name": "Role", "data_type": "String"}, {"name": "RowHeight", "data_type": "Integer"}, {"name": "StringAttribute", "data_type": "String"}, {"name": "ItemType", "data_type": "Enumeration"}, {"name": "TextItalic", "data_type": "Boolean"}, {"name": "Priority", "data_type": "Integer"}, {"name": "Inv_Date", "data_type": "Date"}, {"name": "QueryString", "data_type": "String"}, {"name": "isAllRequest", "data_type": "Boolean"}, {"name": "Active", "data_type": "Boolean"}, {"name": "IsServiceReceiver", "data_type": "Boolean"}, {"name": "CalculatedSizeInBytes", "data_type": "Long"}, {"name": "ExternalId", "data_type": "String"}, {"name": "ScheduledDate", "data_type": "Date"}, {"name": "ExpiresAt", "data_type": "Date"}, {"name": "NrOfRecords", "data_type": "Integer"}, {"name": "Format", "data_type": "String"}, {"name": "ColNumber", "data_type": "Integer"}, {"name": "AssociationOwner", "data_type": "Enumeration"}, {"name": "Facing", "data_type": "String"}, {"name": "PrimaryKey", "data_type": "String"}, {"name": "DocumentCreateDate", "data_type": "String"}, {"name": "ChangedByUser", "data_type": "String"}, {"name": "ConstraintText", "data_type": "String"}, {"name": "ProductionDate", "data_type": "Date"}, {"name": "Status", "data_type": "Enumeration"}, {"name": "Category", "data_type": "Enumeration"}, {"name": "TextAlignment", "data_type": "Enumeration"}, {"name": "LabelScale", "data_type": "String"}, {"name": "FieldLength", "data_type": "Integer"}, {"name": "Servicetype", "data_type": "String"}, {"name": "Link1", "data_type": "String"}, {"name": "BorderColor", "data_type": "Enumeration"}, {"name": "Sequence", "data_type": "Integer"}, {"name": "Completed", "data_type": "Boolean"}, {"name": "FTEAvailable", "data_type": "Decimal"}, {"name": "ResourceEditable", "data_type": "Enumeration"}, {"name": "Phone", "data_type": "String"}, {"name": "Content", "data_type": "String"}, {"name": "State", "data_type": "Enumeration"}, {"name": "IncludedStatus", "data_type": "Enumeration"}, {"name": "Sortering_Dashboard", "data_type": "Decimal"}, {"name": "AttributeType", "data_type": "String"}, {"name": "IgnoreEmptyKeys", "data_type": "Boolean"}, {"name": "Name", "data_type": "String"}, {"name": "Password", "data_type": "String"}, {"name": "Zipcode", "data_type": "String"}, {"name": "IntegerAttribute", "data_type": "Integer"}, {"name": "ClassName", "data_type": "String"}, {"name": "ExpiresIn", "data_type": "Integer"}]}
+{
+    "data": [
+        {
+            "name": "Inv_Balance",
+            "data_type": "Decimal"
+        },
+        {
+            "name": "IsDeleted",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "UploadDate",
+            "data_type": "Date"
+        },
+        {
+            "name": "Height",
+            "data_type": "Integer"
+        },
+        {
+            "name": "DocumentDate",
+            "data_type": "String"
+        },
+        {
+            "name": "RetrieveType",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "ReplyTo",
+            "data_type": "String"
+        },
+        {
+            "name": "SeniorManager",
+            "data_type": "String"
+        },
+        {
+            "name": "IsFilterActive",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "BkdNumber",
+            "data_type": "Integer"
+        },
+        {
+            "name": "PassPhrase_Plain",
+            "data_type": "String"
+        },
+        {
+            "name": "PreviousInterval",
+            "data_type": "Integer"
+        },
+        {
+            "name": "HelpText",
+            "data_type": "String"
+        },
+        {
+            "name": "ImportAction",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "LogDateTime",
+            "data_type": "Date"
+        },
+        {
+            "name": "TeamType",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "Role",
+            "data_type": "String"
+        },
+        {
+            "name": "RowHeight",
+            "data_type": "Integer"
+        },
+        {
+            "name": "StringAttribute",
+            "data_type": "String"
+        },
+        {
+            "name": "ItemType",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "TextItalic",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "Priority",
+            "data_type": "Integer"
+        },
+        {
+            "name": "Inv_Date",
+            "data_type": "Date"
+        },
+        {
+            "name": "QueryString",
+            "data_type": "String"
+        },
+        {
+            "name": "isAllRequest",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "Active",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "IsServiceReceiver",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "CalculatedSizeInBytes",
+            "data_type": "Long"
+        },
+        {
+            "name": "ExternalId",
+            "data_type": "String"
+        },
+        {
+            "name": "ScheduledDate",
+            "data_type": "Date"
+        },
+        {
+            "name": "ExpiresAt",
+            "data_type": "Date"
+        },
+        {
+            "name": "NrOfRecords",
+            "data_type": "Integer"
+        },
+        {
+            "name": "Format",
+            "data_type": "String"
+        },
+        {
+            "name": "ColNumber",
+            "data_type": "Integer"
+        },
+        {
+            "name": "AssociationOwner",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "Facing",
+            "data_type": "String"
+        },
+        {
+            "name": "PrimaryKey",
+            "data_type": "String"
+        },
+        {
+            "name": "DocumentCreateDate",
+            "data_type": "String"
+        },
+        {
+            "name": "ChangedByUser",
+            "data_type": "String"
+        },
+        {
+            "name": "ConstraintText",
+            "data_type": "String"
+        },
+        {
+            "name": "ProductionDate",
+            "data_type": "Date"
+        },
+        {
+            "name": "Status",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "Category",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "TextAlignment",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "LabelScale",
+            "data_type": "String"
+        },
+        {
+            "name": "FieldLength",
+            "data_type": "Integer"
+        },
+        {
+            "name": "Servicetype",
+            "data_type": "String"
+        },
+        {
+            "name": "Link1",
+            "data_type": "String"
+        },
+        {
+            "name": "BorderColor",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "Sequence",
+            "data_type": "Integer"
+        },
+        {
+            "name": "Completed",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "FTEAvailable",
+            "data_type": "Decimal"
+        },
+        {
+            "name": "ResourceEditable",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "Phone",
+            "data_type": "String"
+        },
+        {
+            "name": "Content",
+            "data_type": "String"
+        },
+        {
+            "name": "State",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "IncludedStatus",
+            "data_type": "Enumeration"
+        },
+        {
+            "name": "Sortering_Dashboard",
+            "data_type": "Decimal"
+        },
+        {
+            "name": "AttributeType",
+            "data_type": "String"
+        },
+        {
+            "name": "IgnoreEmptyKeys",
+            "data_type": "Boolean"
+        },
+        {
+            "name": "Name",
+            "data_type": "String"
+        },
+        {
+            "name": "Password",
+            "data_type": "String"
+        },
+        {
+            "name": "Zipcode",
+            "data_type": "String"
+        },
+        {
+            "name": "IntegerAttribute",
+            "data_type": "Integer"
+        },
+        {
+            "name": "ClassName",
+            "data_type": "String"
+        },
+        {
+            "name": "ExpiresIn",
+            "data_type": "Integer"
+        }
+    ]
+}
