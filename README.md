@@ -1,6 +1,6 @@
 # data-type-predictor README
 
-Given the name of a property or attribute, try to predict a data type like string, bool int...
+Given the name of a property or attribute like 'BrandName' or 'AmountReceived', try to predict a data type like String, Boolean, Integer...
 
 # Usage
 
