@@ -1,6 +1,8 @@
 # TODO
 
-* [ ] bool from xed xen
+* [x] bool from xed xen
+
+* [ ] TODO xxx add more language codes via library?
 
 * [ ] validate: check accuracy against bigger JSON
 

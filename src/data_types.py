@@ -9,3 +9,6 @@ def Decimal():
 
 def Integer():
     return "Integer"
+
+def String():
+    return "String"

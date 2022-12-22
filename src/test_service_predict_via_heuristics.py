@@ -17,6 +17,9 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('ActiveItem', 'Boolean'),
         ('IgnoreEmptyKeys', 'Boolean'),
         ('IgnoreThis', 'Boolean'),
+        ('Completed', 'Boolean'),
+        ('Taken', 'Boolean'),
+        ('Chosen', 'Boolean'),
         # Numeric - Integer
         ('BkdNumber', 'Integer'),
         ('NrOfRecords', 'Integer'),
@@ -40,10 +43,16 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('ExpiresAt', 'Date'),
         ('CreatedOn', 'Date'),
         # # String
-        # ('Name', 'String'),
-        # ('BrandName', 'String'),
-        # ('Password', 'String'),
-        # ('ZipCode', 'String'),
+        ('Name', 'String'),
+        ('BrandName', 'String'),
+        ('Password', 'String'),
+        ('MainPassword', 'String'),
+        ('ZipCode', 'String'),
+        ('EntryCode', 'String'),
+        # String - ends in language code
+        ('InteriorEN', 'String'),
+        ('InteriorNL', 'String'),
+        # TODO xxx add more language codes via library?
         # # Enumeration
         # ('Color', 'Enumeration'),
         # ('ItemColor', 'Enumeration'),

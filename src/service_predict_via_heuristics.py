@@ -34,4 +34,16 @@ def predict_type_from_name(property_name):
     if first_token in datePrefixTokens:
         return data_types.Date()
 
+    if property_name.endswith('en') or property_name.endswith('ed'):
+        return data_types.Boolean()
+
+    language_codes = ["EN", "NL"]
+    for language_code in language_codes:
+        if property_name.endswith(language_code):
+            return data_types.String()
+
+    string_suffixes = ["name", "password", "code"]
+    if last_token in string_suffixes:
+        return data_types.String()
+
     return None
