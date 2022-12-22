@@ -28,12 +28,12 @@ class TestPredictViaHeuristics(unittest.TestCase):
         #('CalculatedSizeInBytes', 'Integer'),
         ('Priority', 'Integer'),
         ('TopPriority', 'Integer'),
-        # # Numeric - Decimal
-        # ('Inv_Balance', 'Decimal'),
-        # ('InitialBalance', 'Decimal'),
-        # ('BalancePaid', 'Decimal'),
-        # ('AmountReceived', 'Decimal'),
-        # ('ReceivedAmount', 'Decimal'),
+        # Numeric - Decimal
+        ('Inv_Balance', 'Decimal'),
+        ('InitialBalance', 'Decimal'),
+        ('BalancePaid', 'Decimal'),
+        ('AmountReceived', 'Decimal'),
+        ('ReceivedAmount', 'Decimal'),
         # # Date
         # ('UploadDate', 'Date'),
         # ('DateCreated', 'Date'),
