@@ -46,4 +46,8 @@ def predict_type_from_name(property_name):
     if last_token in string_suffixes:
         return data_types.String()
 
+    enumeration_tokens = ["color", "status", "type", "category"]
+    if first_token in enumeration_tokens or last_token in enumeration_tokens:
+        return data_types.Enumeration()
+
     return None

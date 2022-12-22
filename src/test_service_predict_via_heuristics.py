@@ -53,14 +53,14 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('InteriorEN', 'String'),
         ('InteriorNL', 'String'),
         # TODO xxx add more language codes via library?
-        # # Enumeration
-        # ('Color', 'Enumeration'),
-        # ('ItemColor', 'Enumeration'),
-        # ('Status', 'Enumeration'),
-        # ('ItemStatus', 'Enumeration'),
-        # ('RetrieveType', 'Enumeration'),
-        # ('Category', 'Enumeration'),
-        # ('ItemCategory', 'Enumeration')
+        # Enumeration
+        ('Color', 'Enumeration'),
+        ('ItemColor', 'Enumeration'),
+        ('Status', 'Enumeration'),
+        ('ItemStatus', 'Enumeration'),
+        ('RetrieveType', 'Enumeration'),
+        ('Category', 'Enumeration'),
+        ('ItemCategory', 'Enumeration')
     ])
     def test_excluding(self, property_name, expected):
         # Arrange

@@ -7,6 +7,9 @@ def Date():
 def Decimal():
     return "Decimal"
 
+def Enumeration():
+    return "Enumeration"
+
 def Integer():
     return "Integer"
 
