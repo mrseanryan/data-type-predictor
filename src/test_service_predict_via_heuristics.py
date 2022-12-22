@@ -7,7 +7,11 @@ class TestPredictViaHeuristics(unittest.TestCase):
 
     @ parameterized.expand([
         ('IsCar [boolean]', 'IsCar', 'boolean'),
+        ('isCar [boolean]', 'isCar', 'boolean'),
         ('CanCreate [boolean]', 'CanCreate', 'boolean'),
+        ('canCreate [boolean]', 'canCreate', 'boolean'),
+        ('ShouldCopy [boolean]', 'ShouldCopy', 'boolean'),
+        ('shouldCopy [boolean]', 'shouldCopy', 'boolean'),
     ])
     def test_excluding(self, description, property_name, expected):
         # Arrange
