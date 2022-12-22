@@ -28,6 +28,7 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('MaxWidth', 'Integer'),
         ('TopSpeed', 'Integer'),
         ('MaxVelocity', 'Integer'),
+        ('ItemCount', 'Integer'),
         #('CalculatedSizeInBytes', 'Integer'),
         ('Priority', 'Integer'),
         ('TopPriority', 'Integer'),
@@ -49,6 +50,9 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('MainPassword', 'String'),
         ('ZipCode', 'String'),
         ('EntryCode', 'String'),
+        ('OrderedBy', 'String'),
+        ('CustomerEmail', 'String'),
+        ('HomeAddress', 'String'),
         # String - ends in language code
         ('InteriorEN', 'String'),
         ('InteriorNL', 'String'),

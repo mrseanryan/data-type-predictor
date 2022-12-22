@@ -14,7 +14,7 @@ def predict_type_from_name(property_name):
     if first_token in booleanTokens:
         return data_types.Boolean()
 
-    integerSuffixTokens = ["number", "nr", "height", "width", "length", "depth", "speed", "velocity", "priority"]
+    integerSuffixTokens = ["number", "nr", "height", "width", "length", "depth", "speed", "velocity", "priority", "count"]
     if last_token in integerSuffixTokens:
         return data_types.Integer()
     
@@ -42,7 +42,7 @@ def predict_type_from_name(property_name):
         if property_name.endswith(language_code):
             return data_types.String()
 
-    string_suffixes = ["name", "password", "code"]
+    string_suffixes = ["name", "password", "code", "by", "email", "address"]
     if last_token in string_suffixes:
         return data_types.String()
 
