@@ -16,8 +16,8 @@
 
 * [ ] languages: add other languages... (stemming, vocab...)
 
-* [ ] onnx to detect data type?
+* [ ] onnx or other ML to detect data type?
 
-* [ ] add REPL to play with
+* [x] add REPL to play with
 
 * [ ] add REST service
