@@ -34,11 +34,11 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('BalancePaid', 'Decimal'),
         ('AmountReceived', 'Decimal'),
         ('ReceivedAmount', 'Decimal'),
-        # # Date
-        # ('UploadDate', 'Date'),
-        # ('DateCreated', 'Date'),
-        # ('ExpiresAt', 'Date'),
-        # ('CreatedOn', 'Date'),
+        # Date
+        ('UploadDate', 'Date'),
+        ('DateCreated', 'Date'),
+        ('ExpiresAt', 'Date'),
+        ('CreatedOn', 'Date'),
         # # String
         # ('Name', 'String'),
         # ('BrandName', 'String'),

@@ -25,4 +25,13 @@ def predict_type_from_name(property_name):
     decimalTokens = ["balance", "amount"]
     if first_token in decimalTokens or last_token in decimalTokens:
         return data_types.Decimal()
+
+    dateSuffixTokens = ["date", "at", "on"]
+    if last_token in dateSuffixTokens:
+        return data_types.Date()
+
+    datePrefixTokens = ["date"]
+    if first_token in datePrefixTokens:
+        return data_types.Date()
+
     return None
