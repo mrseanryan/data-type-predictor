@@ -1,0 +1,2 @@
+def boolean():
+    return "boolean"
