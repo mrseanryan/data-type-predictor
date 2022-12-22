@@ -6,12 +6,12 @@ import service_predict_via_heuristics
 class TestPredictViaHeuristics(unittest.TestCase):
 
     @ parameterized.expand([
-        ('IsCar [boolean]', 'IsCar', 'boolean'),
-        ('isCar [boolean]', 'isCar', 'boolean'),
-        ('CanCreate [boolean]', 'CanCreate', 'boolean'),
-        ('canCreate [boolean]', 'canCreate', 'boolean'),
-        ('ShouldCopy [boolean]', 'ShouldCopy', 'boolean'),
-        ('shouldCopy [boolean]', 'shouldCopy', 'boolean'),
+        ('IsCar [Boolean]', 'IsCar', 'Boolean'),
+        ('isCar [Boolean]', 'isCar', 'Boolean'),
+        ('CanCreate [Boolean]', 'CanCreate', 'Boolean'),
+        ('canCreate [Boolean]', 'canCreate', 'Boolean'),
+        ('ShouldCopy [Boolean]', 'ShouldCopy', 'Boolean'),
+        ('shouldCopy [Boolean]', 'shouldCopy', 'Boolean'),
     ])
     def test_excluding(self, description, property_name, expected):
         # Arrange

@@ -17,7 +17,7 @@ python3 ./src/predict-type-from-name.py IsOk
 Output:
 
 ```
-boolean
+Boolean
 ```
 
 # Dependencies

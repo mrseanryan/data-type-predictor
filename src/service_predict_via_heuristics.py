@@ -8,7 +8,7 @@ def predict_type_from_name(property_name):
 
     first_token = tokens[0]
 
-    booleanTokens = ["is", "can", "should", "did"]
+    BooleanTokens = ["is", "can", "should", "did"]
 
-    if first_token in booleanTokens:
-        return data_types.boolean()
+    if first_token in BooleanTokens:
+        return data_types.Boolean()

@@ -1,2 +1,2 @@
-def boolean():
-    return "boolean"
+def Boolean():
+    return "Boolean"
