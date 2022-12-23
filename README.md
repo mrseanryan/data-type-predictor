@@ -45,3 +45,11 @@ Boolean
 1. The property name (the word) is stemmed into smaller tokens, assuming camelCase or PascalCase
 2. Heuristics are run to try and recognise the first or last token. Example: `is` or `can` indicates `Boolean`. If match is found, exit.
 3. Levenshtein distance is then allowed on longer tokens, to try to get a fuzzy match.
+
+# Evaluation (Validation)
+
+| Approach | Correctly predicted | Incorrectly predicated | Not predicted | Data set | Comment |
+|---|---|---|---|---|---|
+| Heuristics, no fuzzy match | 45% | 5% | 50% | 66 words | 'Safe' predications |
+| Heuristics, with fuzzy match (min word 3, max distance 5) | 47% | 48% | 5% | 66 words | 'Unsafe' fuzzy predications: small gain in true positives with cost of much more false positives. |
+| Heuristics, with fuzzy match (min word 5, max distance 2) | 50% | 14% | 36% | 66 words | 'Safer' fuzzy predications.

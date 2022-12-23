@@ -29,7 +29,7 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('AtiveItem', 'Boolean'),
         ('IgnoorEmptyKeys', 'Boolean'),
         ('IgnreThis', 'Boolean'),
-        ('Compltd', 'Boolean'),
+        # supporting this causes too many false positives - ('Compltd', 'Boolean'),
         # Numeric - Integer
         ('BkdNumber', 'Integer'),
         ('NrOfRecords', 'Integer'),
