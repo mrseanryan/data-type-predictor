@@ -51,7 +51,7 @@ def _predict_type_from_name_can_be_fuzzy(property_name, is_fuzzy, first_token, l
 
     return None
 
-def predict_type_from_name(property_name):
+def predict_type_from_name(property_name, is_fuzzy):
     tokens = service_stemmer.camel_case_split_lower(property_name)
     if len(tokens) == 0:
         return None
@@ -61,7 +61,7 @@ def predict_type_from_name(property_name):
 
     # Run exact match first, then try fuzzy
     prediction = _predict_type_from_name_can_be_fuzzy(property_name, False, first_token, last_token)
-    if prediction is None:
+    if is_fuzzy and prediction is None:
         prediction = _predict_type_from_name_can_be_fuzzy(property_name, True, first_token, last_token)
 
     return prediction

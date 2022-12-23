@@ -1,1 +1,1 @@
-python3 ./src/predict-type-from-name-repl.py
+python3 ./src/predict-type-from-name-repl.py --fuzzy

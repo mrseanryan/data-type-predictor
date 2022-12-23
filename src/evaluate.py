@@ -1,15 +1,30 @@
+"""
+evaluate.py <JSON file path OR glob> [--help --fuzzy]
+"""
 # Evaluate accuracy against a data set
 import glob
-import sys
+from optparse import OptionParser
 
 import service_predict_type_from_name
 import util_file
 
-if len(sys.argv) < 2:
-    print(f"USAGE: {sys.argv[0]} <JSON file path OR glob>")
+#usage() - prints out the usage text, from the top of this file :-)
+def print_usage():
+    print(__doc__)
+
+parser = OptionParser(usage=__doc__)
+parser.add_option("-f", "--fuzzy", dest="is_fuzzy",
+    action='store_const',
+    const=True, default=False,
+    help="Apply fuzzy matching")
+
+(options, args) = parser.parse_args()
+
+if len(args) != 1:
+    print_usage()
     exit(1)
 
-INPUT_GLOB = sys.argv[1]
+INPUT_GLOB = args[0]
 
 def calculate_percent(numerator, denominator):
     return round((numerator * 100) / denominator)
@@ -24,7 +39,7 @@ for json_file_path in glob.glob(INPUT_GLOB):
     for entry in entries:
         property_name = entry["name"]
         expected_property_type = entry["data_type"]
-        predicted_type = service_predict_type_from_name.predict_type_from_name(property_name)
+        predicted_type = service_predict_type_from_name.predict_type_from_name(property_name, options.is_fuzzy)
         if (predicted_type == expected_property_type):
             hits = hits + 1
         else:
@@ -34,7 +49,11 @@ for json_file_path in glob.glob(INPUT_GLOB):
                 misses = misses + 1
         total_names = total_names + 1
 
-print("# Accuracy:")
+options_summary = ""
+if options.is_fuzzy:
+    options_summary = "(fuzzy matching is enabled)"
+
+print(f"# Accuracy: {options_summary}")
 print()
 print(f"{calculate_percent(hits, total_names)}% correctly predicted")
 print(f"{calculate_percent(misses, total_names)}% incorrectly predicted")
