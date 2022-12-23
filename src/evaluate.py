@@ -49,11 +49,16 @@ for json_file_path in glob.glob(INPUT_GLOB):
                 misses = misses + 1
         total_names = total_names + 1
 
+def calculate_accuracy(tp, fp):
+    return calculate_percent(tp, tp + fp)
+
 options_summary = ""
 if options.is_fuzzy:
     options_summary = "(fuzzy matching is enabled)"
 
-print(f"# Accuracy: {options_summary}")
+print(f"# Evaluation: {options_summary}")
+print()
+print(f"Accuracy = TP/(TP+FP) = {calculate_accuracy(hits, misses)}%")
 print()
 print(f"{calculate_percent(hits, total_names)}% correctly predicted")
 print(f"{calculate_percent(misses, total_names)}% incorrectly predicted")
