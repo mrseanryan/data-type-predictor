@@ -2,6 +2,12 @@
 
 Given the name of a property or attribute like 'BrandName' or 'AmountReceived', try to predict a data type like String, Boolean, Integer...
 
+# Dependencies
+
+```
+python3 -m pip install --upgrade parameterized==0.7.5 levenshtein==0.20.8
+```
+
 # Usage
 
 ```
@@ -34,8 +40,8 @@ Output:
 Boolean
 ```
 
-# Dependencies
+# Approach
 
-```
-python3 -m pip install --upgrade parameterized=0.7.5
-```
+1. The property name (the word) is stemmed into smaller tokens, assuming camelCase or PascalCase
+2. Heuristics are run to try and recognise the first or last token. Example: `is` or `can` indicates `Boolean`. If match is found, exit.
+3. Levenshtein distance is then allowed on longer tokens, to try to get a fuzzy match.

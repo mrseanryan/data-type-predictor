@@ -20,6 +20,16 @@ class TestPredictViaHeuristics(unittest.TestCase):
         ('Completed', 'Boolean'),
         ('Taken', 'Boolean'),
         ('Chosen', 'Boolean'),
+        # Boolean - Fuzzy
+        ('ConCreate', 'Boolean'),
+        ('kanCreate', 'Boolean'),
+        ('SholdCopy', 'Boolean'),
+        ('shoudCopy', 'Boolean'),
+        ('Actve', 'Boolean'),
+        ('AtiveItem', 'Boolean'),
+        ('IgnoorEmptyKeys', 'Boolean'),
+        ('IgnreThis', 'Boolean'),
+        ('Compltd', 'Boolean'),
         # Numeric - Integer
         ('BkdNumber', 'Integer'),
         ('NrOfRecords', 'Integer'),

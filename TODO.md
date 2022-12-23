@@ -12,7 +12,7 @@
 
 * [ ] validate: check accuracy against bigger JSON
 
-* [ ] fuzzy match via Levenshtein distance
+* [x] fuzzy match via Levenshtein distance
 
 * [ ] languages: add other languages... (stemming, vocab...)
 
