@@ -2,11 +2,10 @@
 evaluate.py <JSON file path OR glob> [--help --fuzzy]
 """
 # Evaluate accuracy against a data set
-import glob
 from optparse import OptionParser
 
-import service_predict_type_from_name
-import util_file
+import service_evaluate
+import util_number
 
 #usage() - prints out the usage text, from the top of this file :-)
 def print_usage():
@@ -26,41 +25,17 @@ if len(args) != 1:
 
 INPUT_GLOB = args[0]
 
-def calculate_percent(numerator, denominator):
-    return round((numerator * 100) / denominator)
-
-total_names = 0
-hits = 0
-misses = 0
-not_predicted = 0
-
-for json_file_path in glob.glob(INPUT_GLOB):
-    entries = util_file.read_json_file(json_file_path)["data"]
-    for entry in entries:
-        property_name = entry["name"]
-        expected_property_type = entry["data_type"]
-        predicted_type = service_predict_type_from_name.predict_type_from_name(property_name, options.is_fuzzy)
-        if (predicted_type == expected_property_type):
-            hits = hits + 1
-        else:
-            if predicted_type is None:
-                not_predicted = not_predicted + 1
-            else:
-                misses = misses + 1
-        total_names = total_names + 1
-
-def calculate_accuracy(tp, fp):
-    return calculate_percent(tp, tp + fp)
-
 options_summary = ""
 if options.is_fuzzy:
     options_summary = "(fuzzy matching is enabled)"
 
+result = service_evaluate.evaluate_accuracy(INPUT_GLOB, options.is_fuzzy)
+
 print(f"# Evaluation: {options_summary}")
 print()
-print(f"Accuracy = TP/(TP+FP) = {calculate_accuracy(hits, misses)}%")
+print(f"Accuracy = TP/(TP+FP) = {result.accuracy}%")
 print()
-print(f"{calculate_percent(hits, total_names)}% correctly predicted")
-print(f"{calculate_percent(misses, total_names)}% incorrectly predicted")
-print(f"{calculate_percent(not_predicted, total_names)}% not predicted")
-print(f"Data set size: {total_names} words")
+print(f"{util_number.calculate_percent(result.hits, result.total_names)}% correctly predicted")
+print(f"{util_number.calculate_percent(result.misses, result.total_names)}% incorrectly predicted")
+print(f"{util_number.calculate_percent(result.not_predicted, result.total_names)}% not predicted")
+print(f"Data set size: {result.total_names} words")
