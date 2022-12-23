@@ -1,4 +1,6 @@
 """
+Given the name of a property or attribute like 'BrandName' or 'AmountReceived', try to predict a data type like String, Boolean, Integer...
+
 predict-type-from-name.py <property name> [--help --fuzzy]
 """
 from optparse import OptionParser

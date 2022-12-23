@@ -1,7 +1,7 @@
 """
+Evaluate accuracy against a data set
 evaluate.py <JSON file path OR glob> [--help --fuzzy]
 """
-# Evaluate accuracy against a data set
 from optparse import OptionParser
 
 import service_evaluate
