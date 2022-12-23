@@ -5,7 +5,7 @@ Given the name of a property or attribute like 'BrandName' or 'AmountReceived', 
 # Dependencies
 
 ```
-python3 -m pip install --upgrade parameterized==0.7.5 levenshtein==0.20.8
+python3 -m pip install --upgrade parameterized==0.7.5 levenshtein==0.20.8 Flask==2.2.2
 ```
 
 # Usage - Prediction
@@ -41,6 +41,24 @@ ExportedOn=Date
 (just press ENTER to exit) ->ItemWidth
 ItemWidth=Integer
 ```
+
+## Example - running as a REST API
+
+```
+./go.api.sh
+```
+
+Open a URL with a property-name at the end:
+
+```
+http://127.0.0.1:5000/predict_type/Branded
+```
+
+Output:
+```
+property_name: Branded -> predicted type=Boolean
+```
+
 
 # Usage - Evaluation
 
