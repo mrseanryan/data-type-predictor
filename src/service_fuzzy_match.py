@@ -1,12 +1,10 @@
 import Levenshtein
-
-MAX_DISTANCE = 2
-MIN_LENGTH = max(5, MAX_DISTANCE)
+from config_fuzzy_match import FuzzyMatchConfig
 
 def is_fuzzy_match(word1, word2):
-    if len(word1) < MIN_LENGTH or len(word2) < MIN_LENGTH:
+    if len(word1) < FuzzyMatchConfig.CalculateMinLength() or len(word2) < FuzzyMatchConfig.CalculateMinLength():
         return word1 == word2
-    return Levenshtein.distance(word1, word2, score_cutoff=MAX_DISTANCE) <= MAX_DISTANCE
+    return Levenshtein.distance(word1, word2, score_cutoff=FuzzyMatchConfig.MAX_DISTANCE) <= FuzzyMatchConfig.MAX_DISTANCE
 
 def is_fuzzy_match_list(word, other_words):
     for other_word in other_words:

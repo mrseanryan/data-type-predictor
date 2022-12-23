@@ -2,6 +2,9 @@ from parameterized import parameterized
 import unittest
 
 import service_predict_via_heuristics
+from config_fuzzy_match import FuzzyMatchConfig
+
+FuzzyMatchConfig.MIN_LENGTH = 3
 
 class TestPredictViaHeuristics(unittest.TestCase):
     @ parameterized.expand([
