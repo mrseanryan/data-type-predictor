@@ -48,8 +48,17 @@ Boolean
 
 # Evaluation (Validation)
 
+1. Data set: 66 words
+
 | Approach | Correctly predicted | Incorrectly predicated | Not predicted | Data set | Comment |
 |---|---|---|---|---|---|
 | Heuristics, no fuzzy match | 45% | 5% | 50% | 66 words | 'Safe' predications |
 | Heuristics, with fuzzy match (min word 3, max distance 5) | 47% | 48% | 5% | 66 words | 'Unsafe' fuzzy predications: small gain in true positives with cost of much more false positives. |
-| Heuristics, with fuzzy match (min word 5, max distance 2) | 50% | 14% | 36% | 66 words | 'Safer' fuzzy predications.
+| Heuristics, with fuzzy match (min word 5, max distance 2) | 50% | 14% | 36% | 66 words | 'Safer' fuzzy predications. |
+
+1. Data set: 5640 words
+
+| Approach | Correctly predicted | Incorrectly predicated | Not predicted | Data set | Comment |
+|---|---|---|---|---|---|
+| Heuristics, no fuzzy match | 16% | 7% | 77% | 5640 words | 'Safe' predications. |
+| Heuristics, with fuzzy match (min word 5, max distance 2) | 24% | 30% | 46% | 5640 words | 'Safer' fuzzy predications. |
