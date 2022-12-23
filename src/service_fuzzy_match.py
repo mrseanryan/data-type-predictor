@@ -1,7 +1,7 @@
 import Levenshtein
 
 MAX_DISTANCE = 2
-MIN_LENGTH = min(5, MAX_DISTANCE)
+MIN_LENGTH = max(5, MAX_DISTANCE)
 
 def is_fuzzy_match(word1, word2):
     if len(word1) < MIN_LENGTH or len(word2) < MIN_LENGTH:
